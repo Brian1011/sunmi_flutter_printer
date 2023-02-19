@@ -63,6 +63,7 @@ class Sunmi {
     await SunmiPrinter.setAlignment(SunmiPrintAlign.CENTER);
 
     // prints a row with 3 columns
+    // total width of columns should be 30
     await SunmiPrinter.printRow(cols: [
       ColumnMaker(
         text: "$column1",
@@ -96,7 +97,7 @@ class Sunmi {
     await printRowAndColumns(
         column1: "Column 1", column2: "Column 2", column3: "Column 3");
     await printQRCode("Dart is powerful");
-    await SunmiPrinter.cut();
+    //await SunmiPrinter.cut();
     await closePrinter();
   }
 }
