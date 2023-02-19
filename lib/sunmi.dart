@@ -45,9 +45,11 @@ class Sunmi {
 
   // print text as qrcode
   Future<void> printQRCode(String text) async {
+    // set alignment center
+    await SunmiPrinter.setAlignment(SunmiPrintAlign.CENTER);
     await SunmiPrinter.lineWrap(1); // creates one line space
     await SunmiPrinter.printQRCode(text);
-    await SunmiPrinter.lineWrap(1); // creates one line space
+    await SunmiPrinter.lineWrap(4); // creates one line space
   }
 
   // print row and 2 columns
@@ -57,21 +59,24 @@ class Sunmi {
       String? column3 = "column 3"}) async {
     await SunmiPrinter.lineWrap(1); // creates one line space
 
+    // set alignment center
+    await SunmiPrinter.setAlignment(SunmiPrintAlign.CENTER);
+
     // prints a row with 3 columns
     await SunmiPrinter.printRow(cols: [
       ColumnMaker(
         text: "$column1",
-        width: 4,
+        width: 10,
         align: SunmiPrintAlign.LEFT,
       ),
       ColumnMaker(
         text: "$column2",
-        width: 4,
+        width: 10,
         align: SunmiPrintAlign.CENTER,
       ),
       ColumnMaker(
         text: "$column3",
-        width: 4,
+        width: 10,
         align: SunmiPrintAlign.RIGHT,
       ),
     ]);
@@ -91,6 +96,7 @@ class Sunmi {
     await printRowAndColumns(
         column1: "Column 1", column2: "Column 2", column3: "Column 3");
     await printQRCode("Dart is powerful");
+    await SunmiPrinter.cut();
     await closePrinter();
   }
 }
