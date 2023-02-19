@@ -15,7 +15,7 @@ class Sunmi {
   // print image
   Future<void> printLogoImage() async {
     await SunmiPrinter.lineWrap(1); // creates one line space
-    Uint8List byte = await _getImageFromAsset('assets/flutter_logo.png');
+    Uint8List byte = await _getImageFromAsset('assets/flutter_black_white.png');
     await SunmiPrinter.printImage(byte);
     await SunmiPrinter.lineWrap(1); // creates one line space
   }
