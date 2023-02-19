@@ -14,8 +14,24 @@ class _SunmiScreenState extends State<SunmiScreen> {
       appBar: AppBar(
         title: const Text('Sunmi Flutter Demo'),
       ),
-      body: const Center(
-        child: Text('Hello World'),
+      body: Container(
+        height: double.infinity,
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Center(
+              child: Text('Sunmi pos printer'),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text('Print'),
+            ),
+          ],
+        ),
       ),
     );
   }
