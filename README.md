@@ -1,16 +1,21 @@
-# sunmi
+# Flutter Sunmi V2 intergration and printing sample
 
-A new Flutter project.
+## Demo
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## About
 
-A few resources to get you started if this is your first Flutter project:
+This is a flutter project whose aim is to illustrate [Sunmi V2](https://www.sunmi.com/en/v2-pro/) integration and printing with flutter application.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Packages used
+- **Sunmi printer plus** for printing [pub.dev](https://pub.dev/packages/sunmi_printer_plus)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## To run the project:
+```
+flutter pub get
+flutter run
+```
+
+## Versions used
+- Flutter: 3.3.10
+- Dart: 2.18.6
